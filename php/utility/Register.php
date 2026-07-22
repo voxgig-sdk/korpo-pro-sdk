@@ -1,0 +1,67 @@
+<?php
+declare(strict_types=1);
+
+// KorpoPro SDK utility registration
+
+require_once __DIR__ . '/../core/UtilityType.php';
+require_once __DIR__ . '/Clean.php';
+require_once __DIR__ . '/Done.php';
+require_once __DIR__ . '/MakeError.php';
+require_once __DIR__ . '/FeatureAdd.php';
+require_once __DIR__ . '/FeatureHook.php';
+require_once __DIR__ . '/FeatureInit.php';
+require_once __DIR__ . '/Fetcher.php';
+require_once __DIR__ . '/MakeFetchDef.php';
+require_once __DIR__ . '/MakeContext.php';
+require_once __DIR__ . '/MakeOptions.php';
+require_once __DIR__ . '/MakeRequest.php';
+require_once __DIR__ . '/MakeResponse.php';
+require_once __DIR__ . '/MakeResult.php';
+require_once __DIR__ . '/MakePoint.php';
+require_once __DIR__ . '/MakeSpec.php';
+require_once __DIR__ . '/MakeUrl.php';
+require_once __DIR__ . '/Param.php';
+require_once __DIR__ . '/PrepareAuth.php';
+require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/PrepareHeaders.php';
+require_once __DIR__ . '/PrepareMethod.php';
+require_once __DIR__ . '/PrepareParams.php';
+require_once __DIR__ . '/PreparePath.php';
+require_once __DIR__ . '/PrepareQuery.php';
+require_once __DIR__ . '/ResultBasic.php';
+require_once __DIR__ . '/ResultBody.php';
+require_once __DIR__ . '/ResultHeaders.php';
+require_once __DIR__ . '/TransformRequest.php';
+require_once __DIR__ . '/TransformResponse.php';
+
+KorpoProUtility::setRegistrar(function (KorpoProUtility $u): void {
+    $u->clean = [KorpoProClean::class, 'call'];
+    $u->done = [KorpoProDone::class, 'call'];
+    $u->make_error = [KorpoProMakeError::class, 'call'];
+    $u->feature_add = [KorpoProFeatureAdd::class, 'call'];
+    $u->feature_hook = [KorpoProFeatureHook::class, 'call'];
+    $u->feature_init = [KorpoProFeatureInit::class, 'call'];
+    $u->fetcher = [KorpoProFetcher::class, 'call'];
+    $u->make_fetch_def = [KorpoProMakeFetchDef::class, 'call'];
+    $u->make_context = [KorpoProMakeContext::class, 'call'];
+    $u->make_options = [KorpoProMakeOptions::class, 'call'];
+    $u->make_request = [KorpoProMakeRequest::class, 'call'];
+    $u->make_response = [KorpoProMakeResponse::class, 'call'];
+    $u->make_result = [KorpoProMakeResult::class, 'call'];
+    $u->make_point = [KorpoProMakePoint::class, 'call'];
+    $u->make_spec = [KorpoProMakeSpec::class, 'call'];
+    $u->make_url = [KorpoProMakeUrl::class, 'call'];
+    $u->param = [KorpoProParam::class, 'call'];
+    $u->prepare_auth = [KorpoProPrepareAuth::class, 'call'];
+    $u->prepare_body = [KorpoProPrepareBody::class, 'call'];
+    $u->prepare_headers = [KorpoProPrepareHeaders::class, 'call'];
+    $u->prepare_method = [KorpoProPrepareMethod::class, 'call'];
+    $u->prepare_params = [KorpoProPrepareParams::class, 'call'];
+    $u->prepare_path = [KorpoProPreparePath::class, 'call'];
+    $u->prepare_query = [KorpoProPrepareQuery::class, 'call'];
+    $u->result_basic = [KorpoProResultBasic::class, 'call'];
+    $u->result_body = [KorpoProResultBody::class, 'call'];
+    $u->result_headers = [KorpoProResultHeaders::class, 'call'];
+    $u->transform_request = [KorpoProTransformRequest::class, 'call'];
+    $u->transform_response = [KorpoProTransformResponse::class, 'call'];
+});

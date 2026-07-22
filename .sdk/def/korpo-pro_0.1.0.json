@@ -1,0 +1,180 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Korpo Pro API",
+    "description": "The Korpo Pro API provides comprehensive access to the functionalities of the korpo.pro website including document management, user authentication, and data retrieval. It is designed for seamless integration with applications requiring document processing and identity verification services.",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Korpo Pro API Documentation",
+      "url": "https://korpo.pro/docs"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://korpo.pro/api/v1",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health check",
+        "description": "Returns API status and service list to verify the API is operational",
+        "operationId": "getHealthStatus",
+        "tags": [
+          "Health"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with API health status and service list",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "description": "Overall API status",
+                      "example": "healthy"
+                    },
+                    "timestamp": {
+                      "type": "string",
+                      "format": "date-time",
+                      "description": "Timestamp of the health check",
+                      "example": "2024-01-15T10:30:00Z"
+                    },
+                    "services": {
+                      "type": "array",
+                      "description": "List of services and their status",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string",
+                            "description": "Service name",
+                            "example": "document-processor"
+                          },
+                          "status": {
+                            "type": "string",
+                            "description": "Service status",
+                            "example": "operational"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Error message",
+                      "example": "Internal server error"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "description": "API status",
+                      "example": "unavailable"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Status message",
+                      "example": "One or more services are unavailable"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HealthStatus": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "description": "Overall API status",
+            "enum": [
+              "healthy",
+              "degraded",
+              "unavailable"
+            ]
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp of the health check"
+          },
+          "services": {
+            "type": "array",
+            "description": "List of services and their status",
+            "items": {
+              "$ref": "#/components/schemas/ServiceStatus"
+            }
+          }
+        }
+      },
+      "ServiceStatus": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Service name"
+          },
+          "status": {
+            "type": "string",
+            "description": "Service operational status",
+            "enum": [
+              "operational",
+              "degraded",
+              "down"
+            ]
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "description": "Error message"
+          },
+          "code": {
+            "type": "string",
+            "description": "Error code"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Health",
+      "description": "Health check and status monitoring endpoints"
+    }
+  ]
+}

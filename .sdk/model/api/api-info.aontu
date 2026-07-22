@@ -1,0 +1,26 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      contact: {
+        name: "Korpo Pro API Documentation"
+        url: "https://korpo.pro/docs"
+      }
+      description: "The Korpo Pro API provides comprehensive access to the functionalities of the korpo.pro website including document management, user authentication, and data retrieval. It is designed for seamless integration with applications requiring document processing and identity verification services."
+      servers: [
+        {
+          description: "Production server"
+          url: "https://korpo.pro/api/v1"
+        }
+      ]
+      summary: "The Korpo Pro API provides comprehensive access to the functionalities of the korpo.pro website including document management, user authentication, and data retrieval."
+      title: "Korpo Pro API"
+      version: "1.0.0"
+      website: "https://korpo.pro"
+    }
+  }
+}
+
