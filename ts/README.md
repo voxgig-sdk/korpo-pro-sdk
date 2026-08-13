@@ -35,7 +35,9 @@ const client = new KorpoProSDK()
 
 ### 2. List health records
 
-`list()` resolves to an array of Health objects — iterate it directly:
+`list()` resolves to an array of Health ENTITIES — every operation
+resolves to entities, not raw records. Iterate them directly, and call
+`.data()` on one for the record it holds:
 
 ```ts
 const healths = await client.Health().list()
@@ -120,7 +122,8 @@ Create a mock client for unit testing — no server required:
 const client = KorpoProSDK.test()
 
 const health = await client.Health().list()
-// health is a bare entity populated with mock response data
+// health is the entity, populated with mock response data
+// — call health.data() for the record itself
 console.log(health)
 ```
 

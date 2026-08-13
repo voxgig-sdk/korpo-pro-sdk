@@ -16,11 +16,11 @@
 import pytest
 
 from projectname_sdk import KorpoProSDK
-from core.error import KorpoProError
-from core.result import KorpoProResult
-from core.response import KorpoProResponse
-from core.spec import KorpoProSpec
-from feature.base_feature import KorpoProBaseFeature
+from projectname_sdk.core.error import KorpoProError
+from projectname_sdk.core.result import KorpoProResult
+from projectname_sdk.core.response import KorpoProResponse
+from projectname_sdk.core.spec import KorpoProSpec
+from projectname_sdk.feature.base_feature import KorpoProBaseFeature
 
 
 def _client():

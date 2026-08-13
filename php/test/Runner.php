@@ -43,8 +43,8 @@ class KorpoProTestRunner
 
     public static function env_override(array $m): array
     {
-        $live = self::getenv('KORPOPRO_TEST_LIVE');
-        $override = self::getenv('KORPOPRO_TEST_OVERRIDE');
+        $live = self::getenv('KORPO_PRO_TEST_LIVE');
+        $override = self::getenv('KORPO_PRO_TEST_OVERRIDE');
 
         if ($live === 'TRUE' || $override === 'TRUE') {
             foreach (array_keys($m) as $key) {
@@ -63,9 +63,9 @@ class KorpoProTestRunner
             }
         }
 
-        $explain = self::getenv('KORPOPRO_TEST_EXPLAIN');
+        $explain = self::getenv('KORPO_PRO_TEST_EXPLAIN');
         if ($explain !== null && $explain !== '') {
-            $m['KORPOPRO_TEST_EXPLAIN'] = $explain;
+            $m['KORPO_PRO_TEST_EXPLAIN'] = $explain;
         }
 
         return $m;

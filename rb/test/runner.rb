@@ -23,8 +23,8 @@ module KorpoProTestRunner
   end
 
   def self.env_override(m)
-    live = getenv("KORPOPRO_TEST_LIVE")
-    override = getenv("KORPOPRO_TEST_OVERRIDE")
+    live = getenv("KORPO_PRO_TEST_LIVE")
+    override = getenv("KORPO_PRO_TEST_OVERRIDE")
 
     if live == "TRUE" || override == "TRUE"
       m.each_key do |key|
@@ -44,8 +44,8 @@ module KorpoProTestRunner
       end
     end
 
-    explain = getenv("KORPOPRO_TEST_EXPLAIN")
-    m["KORPOPRO_TEST_EXPLAIN"] = explain if explain && !explain.empty?
+    explain = getenv("KORPO_PRO_TEST_EXPLAIN")
+    m["KORPO_PRO_TEST_EXPLAIN"] = explain if explain && !explain.empty?
 
     m
   end

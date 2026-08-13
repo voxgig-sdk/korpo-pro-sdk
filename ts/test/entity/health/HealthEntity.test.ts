@@ -26,8 +26,8 @@ import {
 describe('HealthEntity', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when KORPOPRO_TEST_LIVE=TRUE.
-  afterEach(liveDelay('KORPOPRO_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when KORPO_PRO_TEST_LIVE=TRUE.
+  afterEach(liveDelay('KORPO_PRO_TEST_LIVE'))
 
   test('instance', async () => {
     const testsdk = KorpoProSDK.test()
@@ -63,7 +63,7 @@ describe('HealthEntity', async () => {
     const health_ref01_ent = client.Health()
     const health_ref01_match: any = {}
 
-    const health_ref01_list = await health_ref01_ent.list(health_ref01_match)
+    const health_ref01_list = (await health_ref01_ent.list(health_ref01_match)).map((e: any) => e.data())
 
 
   })

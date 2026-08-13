@@ -23,6 +23,7 @@ require_once __DIR__ . '/MakeUrl.php';
 require_once __DIR__ . '/Param.php';
 require_once __DIR__ . '/PrepareAuth.php';
 require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
 require_once __DIR__ . '/PrepareHeaders.php';
 require_once __DIR__ . '/PrepareMethod.php';
 require_once __DIR__ . '/PrepareParams.php';
@@ -59,6 +60,8 @@ KorpoProUtility::setRegistrar(function (KorpoProUtility $u): void {
     $u->prepare_params = [KorpoProPrepareParams::class, 'call'];
     $u->prepare_path = [KorpoProPreparePath::class, 'call'];
     $u->prepare_query = [KorpoProPrepareQuery::class, 'call'];
+    $u->graphql_body = [KorpoProGraphql::class, 'body'];
+    $u->graphql_errors = [KorpoProGraphql::class, 'errors'];
     $u->result_basic = [KorpoProResultBasic::class, 'call'];
     $u->result_body = [KorpoProResultBody::class, 'call'];
     $u->result_headers = [KorpoProResultHeaders::class, 'call'];

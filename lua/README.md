@@ -218,9 +218,9 @@ data **directly** — there is no wrapper:
 
 Check `err` first (it is non-`nil` on failure), then use `value`:
 
-    local health, err = client:Health():load()
+    local health, err = client:Health():list()
     if err then error(err) end
-    -- health is the loaded record
+    -- health is the record list
 
 Only `direct()` returns a response envelope — a `table` with `ok`,
 `status`, `headers`, and `data` keys.

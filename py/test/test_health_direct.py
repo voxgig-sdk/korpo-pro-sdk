@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from korpopro_sdk.utility.voxgig_struct import voxgig_struct as vs
 from korpopro_sdk import KorpoProSDK
-from core import helpers
+from korpopro_sdk.core import helpers
 from test import runner
 
 
@@ -58,11 +58,11 @@ def _health_direct_setup(mockres):
     calls = []
 
     env = runner.env_override({
-        "KORPOPRO_TEST_HEALTH_ENTID": {},
-        "KORPOPRO_TEST_LIVE": "FALSE",
+        "KORPO_PRO_TEST_HEALTH_ENTID": {},
+        "KORPO_PRO_TEST_LIVE": "FALSE",
     })
 
-    live = env.get("KORPOPRO_TEST_LIVE") == "TRUE"
+    live = env.get("KORPO_PRO_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {

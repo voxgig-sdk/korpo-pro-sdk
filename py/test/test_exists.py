@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# KorpoPro SDK exists test
 
 import pytest
 from korpopro_sdk import KorpoProSDK

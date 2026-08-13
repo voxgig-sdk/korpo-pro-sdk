@@ -14,12 +14,12 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from config import make_config
-from features import _make_feature
-from core.control import KorpoProControl
-from core.error import KorpoProError
-from core.result import KorpoProResult
-from core.spec import KorpoProSpec
+from korpopro_sdk.config import make_config
+from korpopro_sdk.features import _make_feature
+from korpopro_sdk.core.control import KorpoProControl
+from korpopro_sdk.core.error import KorpoProError
+from korpopro_sdk.core.result import KorpoProResult
+from korpopro_sdk.core.spec import KorpoProSpec
 
 
 # True when this SDK was generated with the named feature.

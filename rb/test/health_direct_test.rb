@@ -60,11 +60,11 @@ def health_direct_setup(mockres)
   calls = []
 
   env = Runner.env_override({
-    "KORPOPRO_TEST_HEALTH_ENTID" => {},
-    "KORPOPRO_TEST_LIVE" => "FALSE",
+    "KORPO_PRO_TEST_HEALTH_ENTID" => {},
+    "KORPO_PRO_TEST_LIVE" => "FALSE",
   })
 
-  live = env["KORPOPRO_TEST_LIVE"] == "TRUE"
+  live = env["KORPO_PRO_TEST_LIVE"] == "TRUE"
 
   if live
     merged_opts = {

@@ -37,7 +37,7 @@ class HealthEntity extends KorpoProEntityBase<Health> {
 
 
 
-  async list(this: any, reqmatch?: HealthListMatch, ctrl?: Control): Promise<Health[]> {
+  async list(this: any, reqmatch?: HealthListMatch, ctrl?: Control): Promise<HealthEntity[]> {
 
     const utility = this._utility
 

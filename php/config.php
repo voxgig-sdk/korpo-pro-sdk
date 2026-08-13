@@ -54,6 +54,7 @@ class KorpoProConfig
                 [
                   'active' => true,
                   'args' => [],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/health',
                   'parts' => [
@@ -62,7 +63,7 @@ class KorpoProConfig
                   'select' => [],
                   'transform' => [
                     'req' => '`reqdata`',
-                    'res' => '`body`',
+                    'res' => '`body.services`',
                   ],
                   'index$' => 0,
                 ],

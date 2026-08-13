@@ -30,7 +30,7 @@ main: kit: entity: health: {
           ]
           transform: {
             req: "`reqdata`"
-            res: "`body`"
+            res: "`body.services`"
           }
         }
       ]
