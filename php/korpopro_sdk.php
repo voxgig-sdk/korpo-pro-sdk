@@ -40,7 +40,7 @@ class KorpoProSDK
         $utility = new KorpoProUtility();
         $this->_utility = $utility;
 
-        $config = KorpoProConfig::make_config();
+        $config = KorpoProConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

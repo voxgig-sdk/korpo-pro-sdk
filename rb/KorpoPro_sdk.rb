@@ -28,7 +28,7 @@ class KorpoProSDK
     utility = KorpoProUtility.new
     @_utility = utility
 
-    config = KorpoProConfig.make_config
+    config = KorpoProConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,

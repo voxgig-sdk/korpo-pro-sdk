@@ -23,8 +23,8 @@ class KorpoProSDK:
         utility = KorpoProUtility()
         self._utility = utility
 
-        from korpopro_sdk.config import make_config
-        config = make_config()
+        from korpopro_sdk.config import shared_config
+        config = shared_config()
 
         self._rootctx = utility.make_context({
             "client": self,

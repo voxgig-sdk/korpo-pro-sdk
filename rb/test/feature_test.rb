@@ -15,7 +15,7 @@ require_relative "../KorpoPro_sdk"
 module KorpoProFeatureHarness
   # True when this SDK was generated with the named feature.
   def self.has_feature?(name)
-    f = KorpoProConfig.make_config["feature"]
+    f = KorpoProConfig.shared_config["feature"]
     f.is_a?(Hash) && !f[name].nil?
   end
 

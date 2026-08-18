@@ -36,7 +36,7 @@ class Config {
 
 
   options = {
-    base: 'https://korpo.pro/api/v1',
+    base: "https://korpo.pro/api/v1",
 
     headers: {
       "content-type": "application/json"
@@ -55,18 +55,12 @@ class Config {
     "health": {
       "fields": [
         {
-          "active": true,
           "name": "name",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 0
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "status",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 1
+          "type": "`$STRING`"
         }
       ],
       "name": "health",
@@ -76,7 +70,6 @@ class Config {
           "name": "list",
           "points": [
             {
-              "active": true,
               "args": {},
               "kind": "http",
               "method": "GET",
@@ -88,11 +81,9 @@ class Config {
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body.services`"
-              },
-              "index$": 0
+              }
             }
-          ],
-          "key$": "list"
+          ]
         }
       },
       "relations": {
