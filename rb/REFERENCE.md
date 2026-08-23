@@ -93,8 +93,8 @@ health = client.Health
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `name` | `String` | No |  |
-| `status` | `String` | No |  |
+| `name` | `String` | No | Service name |
+| `status` | `String` | No | Service status |
 
 ### Operations
 

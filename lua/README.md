@@ -231,8 +231,8 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `name` |  |
-| `status` |  |
+| `name` | Service name |
+| `status` | Service status |
 
 Operations: List.
 
@@ -257,8 +257,8 @@ Create an instance: `local health = client:Health(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `name` | `string` |  |
-| `status` | `string` |  |
+| `name` | `string` | Service name |
+| `status` | `string` | Service status |
 
 #### Example: List
 

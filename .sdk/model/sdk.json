@@ -36,12 +36,14 @@
               "active": true,
               "name": "name",
               "req": false,
+              "short": "Service name",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "status",
               "req": false,
+              "short": "Service status",
               "type": "`$STRING`"
             }
           ],

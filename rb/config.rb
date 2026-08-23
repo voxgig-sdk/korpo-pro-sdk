@@ -19,6 +19,9 @@ module KorpoProConfig
     {
       "main" => {
         "name" => "KorpoPro",
+        "slug" => "korpo-pro",
+        "version" => "0.0.1",
+        "target" => "rb",
       },
       "feature" => {
         "test" => {
@@ -41,10 +44,12 @@ module KorpoProConfig
           "fields" => [
             {
               "name" => "name",
+              "short" => "Service name",
               "type" => "`$STRING`",
             },
             {
               "name" => "status",
+              "short" => "Service status",
               "type" => "`$STRING`",
             },
           ],

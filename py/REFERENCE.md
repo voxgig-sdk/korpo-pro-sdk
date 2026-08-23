@@ -87,8 +87,8 @@ health = client.Health()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `name` | `str` | No |  |
-| `status` | `str` | No |  |
+| `name` | `str` | No | Service name |
+| `status` | `str` | No | Service status |
 
 ### Operations
 

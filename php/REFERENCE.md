@@ -92,8 +92,8 @@ $health = $client->Health();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `name` | `string` | No |  |
-| `status` | `string` | No |  |
+| `name` | `string` | No | Service name |
+| `status` | `string` | No | Service status |
 
 ### Operations
 

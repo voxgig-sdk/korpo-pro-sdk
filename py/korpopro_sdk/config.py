@@ -28,6 +28,9 @@ def make_config():
     return {
         "main": {
             "name": "KorpoPro",
+            "slug": "korpo-pro",
+            "version": "0.0.1",
+            "target": "py",
         },
         "feature": {
             "test": {
@@ -50,10 +53,12 @@ def make_config():
         "fields": [
           {
             "name": "name",
+            "short": "Service name",
             "type": "`$STRING`",
           },
           {
             "name": "status",
+            "short": "Service status",
             "type": "`$STRING`",
           },
         ],

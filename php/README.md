@@ -247,8 +247,8 @@ On error, `ok` is `false` and `$err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `name` |  |
-| `status` |  |
+| `name` | Service name |
+| `status` | Service status |
 
 Operations: List.
 
@@ -273,8 +273,8 @@ Create an instance: `$health = $client->Health();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `name` | `string` |  |
-| `status` | `string` |  |
+| `name` | `string` | Service name |
+| `status` | `string` | Service status |
 
 #### Example: List
 

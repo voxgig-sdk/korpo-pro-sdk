@@ -243,8 +243,8 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `name` |  |
-| `status` |  |
+| `name` | Service name |
+| `status` | Service status |
 
 Operations: List.
 
@@ -269,8 +269,8 @@ Create an instance: `health = client.Health()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `name` | `str` |  |
-| `status` | `str` |  |
+| `name` | `str` | Service name |
+| `status` | `str` | Service status |
 
 #### Example: List
 

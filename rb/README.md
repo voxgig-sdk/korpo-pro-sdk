@@ -237,8 +237,8 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `name` |  |
-| `status` |  |
+| `name` | Service name |
+| `status` | Service status |
 
 Operations: List.
 
@@ -263,8 +263,8 @@ Create an instance: `health = client.Health`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `name` | `String` |  |
-| `status` | `String` |  |
+| `name` | `String` | Service name |
+| `status` | `String` | Service status |
 
 #### Example: List
 

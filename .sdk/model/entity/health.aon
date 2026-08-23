@@ -8,11 +8,13 @@ main: kit: entity: health: {
     {
       name: "name"
       req: false
+      short: "Service name"
       type: "`$STRING`"
     }
     {
       name: "status"
       req: false
+      short: "Service status"
       type: "`$STRING`"
     }
   ]
