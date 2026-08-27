@@ -28,6 +28,7 @@ module KorpoProConfig
           "options" => {
             "active" => false,
           },
+          "transport" => "base",
         },
       },
       "options" => {
