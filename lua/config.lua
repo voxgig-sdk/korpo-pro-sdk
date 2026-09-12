@@ -53,13 +53,18 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/health",
-                ["parts"] = {
-                  "health",
+                ["segments"] = {
+                  {
+                    ["lit"] = "health",
+                  },
                 },
                 ["select"] = {},
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body.services`",
+                },
+                ["parts"] = {
+                  "health",
                 },
               },
             },
