@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { KorpoProSDK } from '@voxgig-sdk/korpo-pro'
+import { KorpoProSDK } from '@voxgig-sdk/korpo-pro-sdk'
 
 const client = new KorpoProSDK()
 ```
@@ -405,7 +405,7 @@ korpo-pro/
 Import the SDK from the package root:
 
 ```ts
-import { KorpoProSDK } from '@voxgig-sdk/korpo-pro'
+import { KorpoProSDK } from '@voxgig-sdk/korpo-pro-sdk'
 ```
 
 ### Entity state

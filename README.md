@@ -105,7 +105,7 @@ local results, err = client:Health():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/korpo-pro` | publish pending — [install from git tag](https://github.com/voxgig-sdk/korpo-pro-sdk/releases) |
+| TypeScript | `@voxgig-sdk/korpo-pro-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/korpo-pro-sdk/releases) |
 | Python | `voxgig-sdk-korpo-pro` | publish pending — [install from git tag](https://github.com/voxgig-sdk/korpo-pro-sdk/releases) |
 | PHP | `voxgig-sdk/korpo-pro` | publish pending — [install from git tag](https://github.com/voxgig-sdk/korpo-pro-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/korpo-pro-sdk/go` | `go get github.com/voxgig-sdk/korpo-pro-sdk/go@latest` |
@@ -119,7 +119,7 @@ local results, err = client:Health():list()
 ### TypeScript
 
 ```ts
-import { KorpoProSDK } from '@voxgig-sdk/korpo-pro'
+import { KorpoProSDK } from '@voxgig-sdk/korpo-pro-sdk'
 
 const client = new KorpoProSDK()
 
