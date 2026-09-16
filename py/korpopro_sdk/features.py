@@ -1,12 +1,18 @@
 # KorpoPro SDK feature factory
 
 from korpopro_sdk.feature.base_feature import KorpoProBaseFeature
+from korpopro_sdk.feature.ratelimit_feature import KorpoProRatelimitFeature
+from korpopro_sdk.feature.retry_feature import KorpoProRetryFeature
 from korpopro_sdk.feature.test_feature import KorpoProTestFeature
+from korpopro_sdk.feature.timeout_feature import KorpoProTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: KorpoProBaseFeature(),
+    "ratelimit": lambda: KorpoProRatelimitFeature(),
+    "retry": lambda: KorpoProRetryFeature(),
     "test": lambda: KorpoProTestFeature(),
+    "timeout": lambda: KorpoProTimeoutFeature(),
 }
 
 
