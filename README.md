@@ -105,12 +105,12 @@ local results, err = client:Health():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/korpo-pro-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/korpo-pro-sdk/releases) |
-| Python | `voxgig-sdk-korpo-pro` | publish pending — [install from git tag](https://github.com/voxgig-sdk/korpo-pro-sdk/releases) |
-| PHP | `voxgig-sdk/korpo-pro` | publish pending — [install from git tag](https://github.com/voxgig-sdk/korpo-pro-sdk/releases) |
+| TypeScript | `@voxgig-sdk/korpo-pro-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/korpo-pro-sdk/tags) |
+| Python | `voxgig-sdk-korpo-pro` | publish pending — [install from git tag](https://github.com/voxgig-sdk/korpo-pro-sdk/tags) |
+| PHP | `voxgig-sdk/korpo-pro` | publish pending — [install from git tag](https://github.com/voxgig-sdk/korpo-pro-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/korpo-pro-sdk/go` | `go get github.com/voxgig-sdk/korpo-pro-sdk/go@latest` |
-| Ruby | `voxgig-sdk-korpo-pro` | publish pending — [install from git tag](https://github.com/voxgig-sdk/korpo-pro-sdk/releases) |
-| Lua | `voxgig-sdk-korpo-pro` | publish pending — [install from git tag](https://github.com/voxgig-sdk/korpo-pro-sdk/releases) |
+| Ruby | `voxgig-sdk-korpo-pro` | publish pending — [install from git tag](https://github.com/voxgig-sdk/korpo-pro-sdk/tags) |
+| Lua | `voxgig-sdk-korpo-pro` | publish pending — [install from git tag](https://github.com/voxgig-sdk/korpo-pro-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/korpo-pro-sdk/go-cli` | `go install github.com/voxgig-sdk/korpo-pro-sdk/go-cli/cmd/korpo-pro@latest` |
 | Go MCP server | `github.com/voxgig-sdk/korpo-pro-sdk/go-mcp` | `go get github.com/voxgig-sdk/korpo-pro-sdk/go-mcp@latest` |
 
